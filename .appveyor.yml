@@ -9,6 +9,7 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (запоминаем информацию о процессе в переменной $App)
   - chmod +x gradlew
+  - choco install Chrome --version 88.0.4324.96
   - ps: $App = Start-Process -FilePath java -ArgumentList "-jar ./artifacts/app-order.jar" -PassThru
 
 build_script:
