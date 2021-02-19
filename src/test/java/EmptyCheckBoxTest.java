@@ -34,7 +34,7 @@ public class EmptyCheckBoxTest {
     void setEmptyCheckBoxTest(){
         driver.get("http://localhost:9999");
         WebElement form = driver.findElement(By.cssSelector("form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван1");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79223462384");
         driver.findElement(By.className("button")).click();
         String text = driver.findElement(By.cssSelector(".input_invalid")).getText().replaceAll("\\s\\s*", " ");
